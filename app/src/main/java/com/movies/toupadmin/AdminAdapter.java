@@ -54,7 +54,7 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.Viewholder> 
         holder.packname.setText(data.getOrder_no());
         holder.paymnetaccount.setText(data.getAccount_no());
         holder.tracnsctionId.setText(data.getTransctionid());
-        holder.orderdate.setText(data.getTime());
+        holder.orderdate.setText(data.getDate());
         holder.payment.setText(data.getBank());
 
         if (data.getColorcode().contains("f")){

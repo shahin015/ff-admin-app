@@ -1,13 +1,12 @@
 package com.movies.toupadmin;
 
 public class OrderData {
-    String account_no,fullname,order_no,phone,playerid,transctionid,bank,time,colorcode;
+    String account_no,fullname,order_no,phone,playerid,transctionid,bank,date,colorcode;
 
     public OrderData() {
     }
 
-
-    public OrderData(String account_no, String fullname, String order_no, String phone, String playerid, String transctionid, String bank, String time, String colorcode) {
+    public OrderData(String account_no, String fullname, String order_no, String phone, String playerid, String transctionid, String bank, String date, String colorcode) {
         this.account_no = account_no;
         this.fullname = fullname;
         this.order_no = order_no;
@@ -15,10 +14,9 @@ public class OrderData {
         this.playerid = playerid;
         this.transctionid = transctionid;
         this.bank = bank;
-        this.time = time;
+        this.date = date;
         this.colorcode = colorcode;
     }
-
 
     public String getAccount_no() {
         return account_no;
@@ -76,12 +74,12 @@ public class OrderData {
         this.bank = bank;
     }
 
-    public String getTime() {
-        return time;
+    public String getDate() {
+        return date;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getColorcode() {
