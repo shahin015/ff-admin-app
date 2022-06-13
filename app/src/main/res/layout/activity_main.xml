@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pack 1"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <EditText
+        android:id="@+id/taka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Taka"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+
+        />
+
+
+
+    <EditText
+        android:id="@+id/maindaimond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Main Daimond"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+
+        />
+
+    <EditText
+        android:id="@+id/bonas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bonas"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+
+        />
+
+
+    <EditText
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Daimond"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save to Data Base"
+        android:id="@+id/button"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order List"
+        android:id="@+id/orderlist"
+        />
+
+
+</LinearLayout>

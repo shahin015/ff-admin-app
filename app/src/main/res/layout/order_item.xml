@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order name"
+        android:textSize="25sp"
+        android:id="@+id/ordername"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="game ID"
+        android:textSize="25sp"
+        android:id="@+id/gameuid"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orderd Daimond "
+        android:textSize="25sp"
+        android:id="@+id/packname"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Account"
+        android:textSize="25sp"
+        android:id="@+id/payment_account"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transction id"
+        android:textSize="25sp"
+        android:id="@+id/transctionId"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Date"
+        android:textSize="25sp"
+        android:id="@+id/orderDate"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Mathord"
+        android:textSize="25sp"
+        android:id="@+id/payment_methord"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+
+        />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:text="Delete"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/delevery"
+        android:layout_width="match_parent"
+        android:text="Delevery"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</LinearLayout>
