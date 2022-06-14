@@ -76,5 +76,12 @@
         android:id="@+id/orderlist"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click TO login"
+        android:id="@+id/LoginButton"
+        />
+
 
 </LinearLayout>

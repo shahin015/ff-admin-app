@@ -18,10 +18,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 public class MainActivity extends AppCompatActivity {
     EditText pack;
     EditText taka,maindimond,bonas,tototaldimond;
-    Button button,orderlist;
+    Button button,orderlist,login;
 
     PackCalss packCalss;
     FirebaseDatabase firebaseDatabase;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         bonas=findViewById(R.id.bonas);
         tototaldimond=findViewById(R.id.total);
         button=findViewById(R.id.button);
+        login=findViewById(R.id.LoginButton);
         packCalss=new PackCalss();
         progressDialog=new ProgressDialog(this);
 
@@ -102,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Login.class));
             }
         });
 

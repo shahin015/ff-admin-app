@@ -166,12 +166,6 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
 
                 notificationsSender.SendNotifications();
 
-
-
-
-
-
-
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").child(data.getOrder_no()).child("colorcode");
                 ref.setValue("t");
 

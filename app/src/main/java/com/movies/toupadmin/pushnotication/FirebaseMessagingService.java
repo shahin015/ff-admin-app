@@ -24,6 +24,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.messaging.RemoteMessage;
 import com.movies.toupadmin.MainActivity;
+import com.movies.toupadmin.R;
 
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {
 
@@ -55,10 +56,10 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "CHANNEL_ID");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            builder.setSmallIcon(R.drawable.icontrans);
+            builder.setSmallIcon(R.drawable.ic_icon);
             builder.setSmallIcon(resourceImage);
         } else {
-//            builder.setSmallIcon(R.drawable.icon_kritikar);
+        builder.setSmallIcon(R.drawable.ic_icon);
             builder.setSmallIcon(resourceImage);
         }
 
@@ -71,7 +72,9 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         builder.setContentTitle(remoteMessage.getNotification().getTitle());
         builder.setContentText(remoteMessage.getNotification().getBody());
         builder.setContentIntent(pendingIntent);
-        builder.setStyle(new NotificationCompat.BigTextStyle().bigText(remoteMessage.getNotification().getBody()));
+        builder.setSmallIcon(R.drawable.ic_icon);
+        builder.setColor(getResources().getColor(R.color.done));
+      ///  builder.setStyle(new NotificationCompat.BigTextStyle().bigText(remoteMessage.getNotification().getBody()));
         builder.setAutoCancel(true);
         builder.setPriority(Notification.PRIORITY_MAX);
 
