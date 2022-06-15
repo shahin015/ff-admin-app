@@ -143,12 +143,15 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
         holder.payment.setText(data.getBank());
         FirebaseMessaging.getInstance().subscribeToTopic("all");
 
+        if (data.getColorcode()!=null){
+
+
         if (data.getColorcode().contains("f")){
 
 
         }else {
             holder.layout.setBackgroundColor(R.color.done);
-        }
+        }}
 
 
 
