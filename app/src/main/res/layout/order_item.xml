@@ -4,93 +4,138 @@
     android:orientation="vertical"
     android:id="@+id/layout"
     android:layout_height="wrap_content">
-    <TextView
+
+    <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Order name"
-        android:textSize="25sp"
-        android:id="@+id/ordername"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+        android:orientation="vertical"
+        >
 
-        />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Order Name"
+            android:textSize="25sp"
+            android:id="@+id/ordername"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="game ID"
-        android:textSize="25sp"
-        android:id="@+id/gameuid"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+            />
 
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Orderd Daimond "
-        android:textSize="25sp"
-        android:id="@+id/packname"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Game ID"
+            android:textSize="25sp"
+            android:id="@+id/gameuid"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Payment Account"
-        android:textSize="25sp"
-        android:id="@+id/payment_account"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+            />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ordered Dimond "
+            android:textSize="25sp"
+            android:id="@+id/packname"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-        />
+            />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Payment Account"
+            android:textSize="25sp"
+            android:id="@+id/payment_account"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Transction id"
-        android:textSize="25sp"
-        android:id="@+id/transctionId"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+            />
 
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Order Date"
-        android:textSize="25sp"
-        android:id="@+id/orderDate"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Transction id"
+            android:textSize="25sp"
+            android:id="@+id/transctionId"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Payment Mathord"
-        android:textSize="25sp"
-        android:id="@+id/payment_methord"
-        android:layout_margin="5dp"
-        android:padding="2dp"
+            />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Order Date"
+            android:textSize="25sp"
+            android:id="@+id/orderDate"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-        />
+            />
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/eidit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Payment Mathord"
+            android:textSize="25sp"
+            android:id="@+id/payment_methord"
+            android:layout_margin="5dp"
+            android:padding="2dp"
 
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="match_parent"
-        android:text="Delete"
-        android:layout_height="wrap_content"/>
+            />
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
 
-    <Button
-        android:id="@+id/delevery"
-        android:layout_width="match_parent"
-        android:text="Delevery"
-        android:layout_height="wrap_content"/>
+            <Button
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/delete"
+                android:text="Delete"
+                />
+
+            <Button
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/two_color_curved"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/delevery"
+                android:text="Delevery"
+                />
 
 
 
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

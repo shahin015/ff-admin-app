@@ -5,23 +5,33 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_margin="10dp"
+
+    >
+
 
     <EditText
         android:id="@+id/textview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/eidit"
+        android:paddingLeft="10dp"
         android:text="pack 1"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        android:layout_marginTop="15dp"
-        />
-
+        android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/taka"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/eidit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+
+
+        android:id="@+id/taka"
+
         android:hint="Taka"
         android:textSize="22sp"
         android:textColor="@color/black"
@@ -32,8 +42,12 @@
 
     <EditText
         android:id="@+id/maindaimond"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/eidit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+
         android:hint="Main Daimond"
         android:textSize="22sp"
         android:textColor="@color/black"
@@ -42,8 +56,12 @@
 
     <EditText
         android:id="@+id/bonas"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/eidit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+
         android:hint="Bonas"
         android:textSize="22sp"
         android:textColor="@color/black"
@@ -53,8 +71,12 @@
 
     <EditText
         android:id="@+id/total"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/eidit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+
         android:hint="Total Daimond"
         android:textSize="22sp"
         android:textColor="@color/black"
@@ -63,6 +85,8 @@
 
 
     <Button
+        android:layout_marginTop="10dp"
+        android:background="@drawable/two_color_curved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="save to Data Base"
@@ -70,6 +94,8 @@
         />
 
     <Button
+        android:layout_marginTop="10dp"
+        android:background="@drawable/two_color_curved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Order List"
@@ -77,6 +103,8 @@
         />
 
     <Button
+        android:layout_marginTop="10dp"
+        android:background="@drawable/two_color_curved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Click TO login"
