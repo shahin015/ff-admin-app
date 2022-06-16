@@ -2,7 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
-    android:layout_height="250dp">
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/rel1"
+        android:layout_alignParentTop="true"
+        >
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +28,8 @@
             android:layout_height="fill_parent"
             android:text="New Order form:"
 
-            android:textColor="@color/black"
+
+            android:textColor="#3CED14"
             android:textSize="20sp"
             android:gravity="start"
             android:layout_margin="5dp"
@@ -49,7 +59,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@color/black"
+        android:background="@drawable/two_color_curved"
         android:layout_below="@id/lay1"
         />
 
@@ -65,30 +75,30 @@
             android:layout_width="5dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:background="@color/black"
+            android:background="@drawable/two_color_curved"
             />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <View
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:background="@color/black"
-                />
+                android:background="@drawable/two_color_curved" />
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/black"
-                    />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/two_color_curved" />
 
 
         </RelativeLayout>
        <LinearLayout
+
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="vertical"
@@ -111,6 +121,7 @@
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:layout_marginTop="5dp"
+        android:id="@+id/lay3"
         android:layout_below="@id/lay1"
         >
        <LinearLayout
@@ -125,7 +136,7 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:text="Player Id "
-               android:textColor="@color/black"
+               android:textColor="#C51717"
                android:textSize="18dp"
                android:padding="2dp"
 
@@ -135,6 +146,7 @@
                android:layout_height="wrap_content"
                android:layout_weight="3"
                android:text="Player Id "
+               android:gravity="center"
                android:textColor="@color/black"
                android:textSize="18dp"
                android:padding="2dp"
@@ -165,7 +177,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="@color/black"
+                android:background="@drawable/two_color_curved"
                 />
 
         </LinearLayout>
@@ -180,9 +192,10 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Player Id "
-                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:text="Total Daimond :"
+                android:gravity="end"
+                android:textColor="#D1237D"
                 android:textSize="18dp"
                 android:padding="2dp"
 
@@ -191,18 +204,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Player Id "
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
-
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Copy"
-                android:gravity="end"
+                android:text="Total Dimond  "
+                android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:padding="2dp"
@@ -222,7 +225,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="@color/black"
+                android:background="@drawable/two_color_curved"
                 />
 
         </LinearLayout>
@@ -238,9 +241,60 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Player Id "
+                android:layout_weight="2"
+                android:text="Recived Account NO:"
+                android:textColor="#DA0E0E"
+                android:textSize="16dp"
+                android:gravity="end"
+                android:padding="2dp"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="01950458291 "
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:textColor="@color/black"
+                android:textSize="18dp"
+                android:padding="2dp"
+
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/two_color_curved"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Transction ID:"
+                android:textColor="#00BCD4"
                 android:textSize="18dp"
                 android:padding="2dp"
 
@@ -249,20 +303,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Player Id "
+                android:text="xyz "
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                android:padding="2dp"
-
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Copy"
-                android:gravity="end"
-                android:textColor="@color/black"
-                android:textSize="18dp"
+                android:gravity="center"
                 android:padding="2dp"
 
                 />
@@ -280,11 +324,10 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="@color/black"
+                android:background="@drawable/two_color_curved"
                 />
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -295,10 +338,12 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Player Id "
+                android:layout_weight="2"
+                android:text="Order Date:"
                 android:textColor="@color/black"
                 android:textSize="18dp"
+                android:gravity="end"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
                 android:padding="2dp"
 
                 />
@@ -306,21 +351,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Player Id "
+                android:text="Order Date "
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:padding="2dp"
-
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Copy"
-                android:gravity="end"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
+                android:gravity="center"
 
                 />
 
@@ -337,7 +372,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="@color/black"
+                android:background="@drawable/two_color_curved"
                 />
 
         </LinearLayout>
@@ -351,9 +386,10 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Player Id "
-                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Payment Methord:"
+                android:textColor="#FF3B3B"
                 android:textSize="18dp"
                 android:padding="2dp"
 
@@ -362,88 +398,61 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Player Id "
+                android:text="bKash "
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:padding="2dp"
+                android:gravity="center"
 
                 />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Copy"
-                android:gravity="end"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
 
-                />
 
 
 
         </LinearLayout>
 
-        <LinearLayout
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_below="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/two_color_curved"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_height="50dp"
+            android:id="@+id/delete"
+            android:text="Delete"
+            />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="@color/black"
-                />
-
-        </LinearLayout>
-        <LinearLayout
+        <Button
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/two_color_curved"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="5"
-
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Player Id "
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
-
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="Player Id "
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
-
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Copy"
-                android:gravity="end"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:padding="2dp"
-
-                />
-
-
-
-        </LinearLayout>
-
-
-
-
-
+            android:layout_height="50dp"
+            android:id="@+id/delevery"
+            android:text="Delevery"
+            />
 
 
 
