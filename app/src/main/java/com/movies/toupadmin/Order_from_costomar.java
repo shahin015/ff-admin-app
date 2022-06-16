@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -122,7 +125,7 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.order_item,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.item_final,parent,false);
         return new ViewHolder(view);
     }
 
@@ -151,6 +154,8 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
 
         }else {
             holder.layout.setBackgroundColor(R.color.done);
+            holder.status.setText("Deleveryed");
+            holder.delevery.setVisibility(View.INVISIBLE);
         }}
 
 
@@ -170,6 +175,7 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
                 notificationsSender.SendNotifications();
 
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").child(data.getOrder_no()).child("colorcode");
+
                 ref.setValue("t");
 
 
@@ -179,10 +185,28 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
 
 
         });
+
+        holder.copys.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ClipboardManager clipboardManager= (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clipData=ClipData.newPlainText("label",data.getPlayerid());
+                clipboardManager.setPrimaryClip(clipData);
+
+                Toast.makeText(context, "Copy:"+data.getPlayerid(), Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//////new commit
+
 
 
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("order").child(data.getOrder_no());
@@ -216,13 +240,15 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     public int getItemCount() {
 
 
+
         return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView ordername,gameId,packname,paymnetaccount,tracnsctionId,orderdate,payment;
-        LinearLayout layout;
+        TextView ordername,gameId,packname,paymnetaccount,tracnsctionId,orderdate,payment,status;
+        TextView copys;
+        RelativeLayout layout;
         Button button,delevery;
 
         public ViewHolder(@NonNull View itemView) {
@@ -239,6 +265,8 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
             layout=itemView.findViewById(R.id.layout);
             button=itemView.findViewById(R.id.delete);
             delevery=itemView.findViewById(R.id.delevery);
+            status=itemView.findViewById(R.id.stasus);
+            copys=itemView.findViewById(R.id.copys);
 
 
 

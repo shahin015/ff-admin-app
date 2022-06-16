@@ -2,11 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_margin="5dp"
+    android:id="@+id/layout"
     android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="270dp"
         android:id="@+id/rel1"
         android:layout_alignParentTop="true"
         >
@@ -18,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
-        android:weightSum="5"
+        android:weightSum="6"
         android:id="@+id/lay1"
         >
 
@@ -27,10 +28,8 @@
             android:layout_weight="2"
             android:layout_height="fill_parent"
             android:text="New Order form:"
-
-
             android:textColor="#3CED14"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:gravity="start"
             android:layout_margin="5dp"
            android:padding="1dp"
@@ -38,17 +37,34 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="3"
+            android:layout_weight="2.8"
             android:layout_height="fill_parent"
-            android:text="Shahin Rahman Akash"
+            android:text="Shahin Rahman"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            android:id="@+id/ordername"
+            android:maxLength="12"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:layout_margin="5dp"
+
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="fill_parent"
+            android:text="Pending"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:id="@+id/stasus"
             android:maxLength="15"
             android:ellipsize="end"
             android:padding="1dp"
             android:gravity="start"
             android:layout_margin="5dp"
-            android:id="@+id/tex"
+
             />
 
 
@@ -134,7 +150,7 @@
            <TextView
                android:layout_width="0dp"
                android:layout_height="wrap_content"
-               android:layout_weight="1"
+               android:layout_weight="1.5"
                android:text="Player Id "
                android:textColor="#C51717"
                android:textSize="18dp"
@@ -144,8 +160,9 @@
            <TextView
                android:layout_width="0dp"
                android:layout_height="wrap_content"
-               android:layout_weight="3"
+               android:layout_weight="2.5"
                android:text="Player Id "
+               android:id="@+id/gameuid"
                android:gravity="center"
                android:textColor="@color/black"
                android:textSize="18dp"
@@ -157,7 +174,8 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"
                android:text="Copy"
-               android:gravity="end"
+               android:id="@+id/copys"
+               android:gravity="center"
                android:textColor="@color/black"
                android:textSize="18dp"
                android:padding="2dp"
@@ -206,6 +224,7 @@
                 android:layout_weight="3"
                 android:text="Total Dimond  "
                 android:gravity="center"
+                android:id="@+id/packname"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:padding="2dp"
@@ -244,7 +263,7 @@
                 android:layout_weight="2"
                 android:text="Recived Account NO:"
                 android:textColor="#DA0E0E"
-                android:textSize="16dp"
+                android:textSize="14dp"
                 android:gravity="end"
                 android:padding="2dp"
 
@@ -254,6 +273,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:text="01950458291 "
+                android:id="@+id/payment_account"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -304,6 +324,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:text="xyz "
+                android:id="@+id/transctionId"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:gravity="center"
@@ -354,6 +375,7 @@
                 android:text="Order Date "
                 android:textColor="@color/black"
                 android:textSize="18dp"
+                android:id="@+id/orderDate"
                 android:padding="2dp"
                 android:gravity="center"
 
@@ -387,10 +409,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:gravity="end"
+                android:gravity="center"
                 android:text="Payment Methord:"
                 android:textColor="#FF3B3B"
-                android:textSize="18dp"
+                android:textSize="14dp"
                 android:padding="2dp"
 
                 />
@@ -401,6 +423,7 @@
                 android:text="bKash "
                 android:textColor="@color/black"
                 android:textSize="18dp"
+                android:id="@+id/payment_methord"
                 android:padding="2dp"
                 android:gravity="center"
 
