@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 if (Pname.isEmpty()||Taka.isEmpty()||Maindaimond.isEmpty()||Bonas.isEmpty()||TotalDaimond.isEmpty()){
 
                     Toast.makeText(MainActivity.this, "Fill All Box", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 progressDialog.setMessage("Saving Data ");
                 progressDialog.show();
