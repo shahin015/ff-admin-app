@@ -2,6 +2,7 @@ package com.movies.toupadmin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -20,10 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText pack;
-    EditText taka,maindimond,bonas,tototaldimond;
-    Button button,orderlist,login;
 
+    Button button;
+
+    CardView orderlist,login,offerUpdate,setingDatabase;
     PackCalss packCalss;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -33,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pack=findViewById(R.id.textview);
-        taka=findViewById(R.id.taka);
-        maindimond=findViewById(R.id.maindaimond);
-        bonas=findViewById(R.id.bonas);
-        tototaldimond=findViewById(R.id.total);
+        offerUpdate=findViewById(R.id.offerUpdate);
+        setingDatabase=findViewById(R.id.setingDatabase);
         button=findViewById(R.id.button);
         login=findViewById(R.id.LoginButton);
         packCalss=new PackCalss();
         progressDialog=new ProgressDialog(this);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("pack");
 
         orderlist=findViewById(R.id.orderlist);
         orderlist.setOnClickListener(new View.OnClickListener() {
@@ -52,66 +53,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("pack");
-
-        // below line is used to get reference for our database.
-
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String Pname=pack.getText().toString();
-                String Taka= taka.getText().toString().trim();
-                String Maindaimond=taka.getText().toString().trim();
-                String Bonas=bonas.getText().toString().trim();
-                String TotalDaimond=tototaldimond.getText().toString().trim();
-
-                if (Pname.isEmpty()||Taka.isEmpty()||Maindaimond.isEmpty()||Bonas.isEmpty()||TotalDaimond.isEmpty()){
-
-                    Toast.makeText(MainActivity.this, "Fill All Box", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                progressDialog.setMessage("Saving Data ");
-                progressDialog.show();
-                packCalss.setTaka(Taka);
-                packCalss.setMaindaimond(Maindaimond);
-                packCalss.setBonas(Bonas);
-                packCalss.setTotaldaimond(TotalDaimond);
-
-                databaseReference.child(Pname).setValue(packCalss).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        progressDialog.dismiss();
-
-                        startActivity(new Intent(MainActivity.this,MainActivity.class));
-                        finish();
 
 
 
 
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        progressDialog.dismiss();
-
-                    }
-                });
-
-
-
-
-
-            }
-        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Login.class));
+            }
+        });
+
+        offerUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,Offerl_list.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+        setingDatabase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(MainActivity.this,Extra_featur.class);
+                startActivity(intent);
+
             }
         });
 

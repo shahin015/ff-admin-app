@@ -223,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:text="Total Dimond  "
-                android:gravity="center"
+                android:gravity="start"
                 android:id="@+id/packname"
                 android:textColor="@color/black"
                 android:textSize="18dp"
@@ -275,7 +275,7 @@
                 android:text="01950458291 "
                 android:id="@+id/payment_account"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:gravity="start"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:padding="2dp"
@@ -327,7 +327,7 @@
                 android:id="@+id/transctionId"
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:padding="2dp"
 
                 />
@@ -377,7 +377,7 @@
                 android:textSize="18dp"
                 android:id="@+id/orderDate"
                 android:padding="2dp"
-                android:gravity="center"
+                android:gravity="start"
 
                 />
 
@@ -425,7 +425,7 @@
                 android:textSize="18dp"
                 android:id="@+id/payment_methord"
                 android:padding="2dp"
-                android:gravity="center"
+                android:gravity="start"
 
                 />
 
@@ -480,6 +480,7 @@
 
 
     </LinearLayout>
+
 
 
 
