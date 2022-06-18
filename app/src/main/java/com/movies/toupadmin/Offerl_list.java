@@ -52,6 +52,11 @@ public class Offerl_list extends AppCompatActivity {
 
 
 
+        firebaseDatabase = FirebaseDatabase.getInstance();
+
+        // below line is used to get reference for our database.
+        databaseReference = firebaseDatabase.getReference("pack");
+
 
 
 

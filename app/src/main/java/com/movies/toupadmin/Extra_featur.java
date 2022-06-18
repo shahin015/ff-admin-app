@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Extra_featur extends AppCompatActivity {
     EditText edline1,edline2,edline3,edline4;
     Button line1,line2,line3,line4;
+    private TextView adstv;
 
   private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference,m_adscontrol;
@@ -43,6 +45,8 @@ public class Extra_featur extends AppCompatActivity {
         line2=findViewById(R.id.buttonl2);
         line3=findViewById(R.id.buttonl3);
         line4=findViewById(R.id.buttonl4);
+        adstv=findViewById(R.id.adswithmemo);
+
         progressDialog=new ProgressDialog(this);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -71,6 +75,7 @@ public class Extra_featur extends AppCompatActivity {
                        public void onComplete(@NonNull Task<Void> task) {
                            Toast.makeText(Extra_featur.this, "On", Toast.LENGTH_SHORT).show();
                            adscontrol.setTag("on");
+                           adstv.setText("Ads are Now On");
 
                            progressDialog.dismiss();
 
@@ -93,6 +98,7 @@ public class Extra_featur extends AppCompatActivity {
 
                             Toast.makeText(Extra_featur.this, "of", Toast.LENGTH_SHORT).show();
                             adscontrol.setTag("off");
+                            adstv.setText("Ads are Now of");
                             progressDialog.dismiss();
                         }
                     }).addOnFailureListener(new OnFailureListener() {

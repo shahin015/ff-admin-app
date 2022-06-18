@@ -36,6 +36,7 @@
            android:layout_height="wrap_content"
            android:textColor="@color/black"
            android:textSize="25dp"
+
            android:hint="Enter Line One Text"
           android:id="@+id/edlineone"
            />
@@ -180,15 +181,35 @@
     </LinearLayout>
 
 
-
-        <Switch
-            android:id="@+id/switch_1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:padding="3dp"
+                android:id="@+id/adswithmemo"
+                android:text="Ads Swith "
 
-            android:tag="off"
-            android:thumb="@drawable/swuch"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
+                />
+
+            <Switch
+                android:id="@+id/switch_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:tag="off"
+                android:thumb="@drawable/swuch"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+
 
 
 
